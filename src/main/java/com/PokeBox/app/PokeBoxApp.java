@@ -26,7 +26,6 @@ public class PokeBoxApp {
 					get(ctx -> {
 					});
 				});
-
 				path(" ", () -> {
 					get(ctx -> {
 					});
