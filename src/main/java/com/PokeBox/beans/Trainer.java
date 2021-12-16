@@ -8,15 +8,15 @@ import java.util.ArrayList;
 
 public class Trainer {
 
-	private int id;
 	private int money;
 	private String name;
+	private String username;
 	private int sublv;
 	private int age;
 	ArrayList<Pokemon> pokemons;
 	//contruc
 	public Trainer() {
-		id=0;
+		username=" ";
 		money=0;
 		name="Trainer";
 		sublv=0;
@@ -24,12 +24,8 @@ public class Trainer {
 		pokemons= new ArrayList<>();
 	}
 	// Getters
-	public int getId() {
-	return id;	
-	}
-	
-	public int getMoney() {
-		return money;
+	public String getUsername() {
+	return username;	
 	}
 	
 	public String getName() {
@@ -45,12 +41,8 @@ public class Trainer {
 		return pokemons;
 	}
 	//setters
-	public void setId(int id) {
-	this.id=id;	
-	}
-	
-	public void setMoney(int money) {
-		this.money=money;;
+	public void setUserName(String username) {
+	this.username=username;	
 	}
 	
 	public void setName(String name) {

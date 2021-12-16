@@ -1,6 +1,6 @@
 package com.PokeBox.beans;
 /**
- * Pokemon will be stored in a PokeBox with the owners information. They can add and remove them.
+ * Pokemon will be stored in a PokeBox with the trainers information. They can add and remove them.
  * 
  * 
  * 

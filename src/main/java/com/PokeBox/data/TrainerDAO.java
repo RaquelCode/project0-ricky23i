@@ -6,6 +6,6 @@ import com.PokeBox.beans.Trainer;
 
 public interface TrainerDAO extends GenericDAO<Trainer>{
 
-
+public Trainer getByUserName(String username);
 
 }
