@@ -28,6 +28,7 @@ public class Pokemon {
 		type="type";
 		name="Pokemon";
 		item="";
+		trainer="ricky23i";
 	}
 	@Override
 	public String toString() {

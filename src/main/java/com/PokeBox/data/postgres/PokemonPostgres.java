@@ -36,9 +36,9 @@ public class PokemonPostgres implements PokemonDAO{
 			pStmt.setString(2, dataToAdd.getType());
 			pStmt.setString(1, dataToAdd.getName());
 			if (dataToAdd.getItem().equals(""))
-				pStmt.setString(6, "null");
+				{pStmt.setString(6, "null");}
 			else
-				pStmt.setString(6, dataToAdd.getItem());
+				{pStmt.setString(6, dataToAdd.getItem());}
 			
 			pStmt.setString(7, dataToAdd.getTrainer());
 			
@@ -193,7 +193,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 //gets by id generated
 	@Override
 	public Pokemon getByID(int id) {
-	Pokemon poke = new Pokemon();
+	Pokemon poke=null;
 		
 		try (Connection conn = connUtil.getConnection()) {
 			String sql = "select * from pokemon where id=?";
@@ -203,7 +203,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 			ResultSet resultSet = pStmt.executeQuery();
 			
 			if (resultSet.next()) {
-				
+				poke=new Pokemon();
 				poke.setId(resultSet.getInt("id"));
 				poke.setName(resultSet.getString("p_name"));
 				poke.setLevel(resultSet.getInt("lv"));
@@ -229,7 +229,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 		try (Connection conn = connUtil.getConnection()) {
 			Statement pStmt = conn.createStatement();
 	
-			ResultSet resultSet = pStmt.executeQuery("select * from pokemon where item=not null");
+			ResultSet resultSet = pStmt.executeQuery("select * from pokemon where item is not null");
 
 			// while the result set has another row
 			while (resultSet.next()) {

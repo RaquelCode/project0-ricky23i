@@ -56,6 +56,7 @@ public class PokemonDAOTest {
 	public void DeletePokemon() {
 		Pokemon newPoke = new Pokemon();
 		int generatedId=pokeDao.create(newPoke);
+		pokeDao.delete(pokeDao.getByID(generatedId));
 		assertNull(pokeDao.getByID(generatedId));
 		
 	}
