@@ -19,16 +19,16 @@ Presentations to me and QC will be on Wednesday, December 22nd (time TBD).
 
 ## Functional Requirements
 1. As a user, I can view all Pokemon.
-	-GET /Pokemon
+-GET /Pokemon
 2. As a user, I can add a new Pokemon.
-	-POST /Pokemon
+-POST /Pokemon
 3. As a user, I can update a Pokemon.
-	-PUT /Pokemon/{id}
+-PUT /Pokemon/{id}
 4. As a user, I can view Pokemon by ID.
-	-GET /Pokemon/{id}
+-GET /Pokemon/{id}
 5. As a user, I can search Pokemon if they are holding an item and greater than a given level.
-	-GET /Pokemon?item=
-	-GET /Pokemon?level=
+-GET /Pokemon?item=
+-GET /Pokemon?level=
 
 
 ## Presentation Requirements

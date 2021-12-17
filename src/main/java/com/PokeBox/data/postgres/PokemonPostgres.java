@@ -14,10 +14,10 @@ import com.PokeBox.utils.ConnectionUtil;
 
 public class PokemonPostgres implements PokemonDAO{
 	private ConnectionUtil connUtil = ConnectionUtil.getConnectionUtil();
-	//create new pokemon. NOTE: TRAINER MUST BE REGESTERED FOR EXAMPLE TESTS ONLY 3 TRAINERS ARE IN DATA BASE
+	//create new pokemon. NOTE: TRAINER MUST BE REGISTERED FOR EXAMPLE TESTS ONLY 3 TRAINERS ARE IN DATA BASE
 	@Override
 	public int create(Pokemon dataToAdd) {
-	int generatedId = 0;
+	int generatedId=0;
 		
 		// try-with-resources auto-closes resources
 		try (Connection conn = connUtil.getConnection()) {
@@ -35,7 +35,11 @@ public class PokemonPostgres implements PokemonDAO{
 			pStmt.setInt(3, dataToAdd.getLevel());
 			pStmt.setString(4, dataToAdd.getType());
 			pStmt.setString(5, dataToAdd.getName());
-			pStmt.setString(6, dataToAdd.getItem());
+			if (dataToAdd.getItem().equals(" "))
+				pStmt.setString(6, "null");
+			else
+				pStmt.setString(6, dataToAdd.getItem());
+			
 			pStmt.setString(6, dataToAdd.getTrainer());
 			
 			// after setting the values, we can run the statement
@@ -106,7 +110,10 @@ Set<Pokemon> allPokemon = new HashSet<>();
 			pStmt.setInt(3, dataToUpdate.getLevel());
 			pStmt.setString(4, dataToUpdate.getType());
 			pStmt.setString(5, dataToUpdate.getName());
-			pStmt.setString(6, dataToUpdate.getItem());
+			if (dataToUpdate.getItem().equals(" "))
+				pStmt.setString(6, "null");
+			else
+				pStmt.setString(6, dataToUpdate.getItem());
 			//trainer may not be update since in data trainer is a foreign key 
 			
 			int rowsAffected = pStmt.executeUpdate();
@@ -125,7 +132,25 @@ Set<Pokemon> allPokemon = new HashSet<>();
 
 	@Override
 	public void delete(Pokemon dataToDelete) {
-		// TODO Auto-generated method stub
+		try (Connection conn = connUtil.getConnection()) {
+			conn.setAutoCommit(false);
+
+			String sql = "delete from pokemon "
+					+ "where id=?";
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+			pStmt.setInt(1, dataToDelete.getId());
+
+			int rowsAffected = pStmt.executeUpdate();
+				
+				if (rowsAffected<=1) {
+					conn.commit();
+				} else {
+					conn.rollback();
+				}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		
 	}
 	// Gets pokemon whose level that is greater than the level provided
@@ -179,7 +204,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 			if (resultSet.next()) {
 				
 				poke.setId(resultSet.getInt("id"));
-				poke.setName(resultSet.getString("name"));
+				poke.setName(resultSet.getString("p_name"));
 				poke.setLevel(resultSet.getInt("lv"));
 				poke.setType(resultSet.getString("type"));
 				poke.setItem(resultSet.getString("item"));

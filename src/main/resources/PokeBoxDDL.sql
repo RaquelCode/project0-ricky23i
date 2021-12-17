@@ -11,11 +11,8 @@ create table if not exists pokemon(
 	p_type varchar(50) not null,
 	hp integer not null,
 	p_exp integer not null,
+	lv integer not null,
 	item varchar(50),
-	trainer varchar(50) not null,
-	constraint fk_trainer 
-		foreign key(trainer) 
-		references trainer(username) 
-		on delete cascade
+	trainer varchar(50) not null
 );
 

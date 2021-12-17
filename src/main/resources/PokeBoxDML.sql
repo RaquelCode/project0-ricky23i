@@ -3,7 +3,7 @@
 	values('ricky23i', 'Richard',3,28),
 	('feeder123', 'Jaiying',1,24),
 	('numba1', 'Red',10,20); */
-/*insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Tern, white-winged black', 'water', '1','25', 'Viscid Lipfern', 'ricky23i');
+insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Tern, white-winged black', 'water', '1','25', 'Viscid Lipfern', 'ricky23i');
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Common langur', 'water', '9053','255','Yellowdot Saxifrage', 'ricky23i');
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Green-winged trumpeter', 'water', '52','255', 'Watermelon Nightshade', 'ricky23i');
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Lory, rainbow', 'water', '02853', '56','Guyanese Wild Coffee', 'ricky23i');
@@ -32,6 +32,6 @@ insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (defaul
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Otter, canadian river', 'fire', '8628','5413', 'Toothed Clubmoss', 'numba1');
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Armadillo, seven-banded', 'electric', '273','45', 'Agapanthus', 'numba1');
 insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Common eland', 'electric', '257','741', 'Kirk''s Violet', 'numba1');
-insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Fox, silver-backed', 'electric', '4','398', 'Montane Coneflower', 'numba1'); */
+insert into pokemon (id, p_name, p_type, hp,p_exp, item, trainer) values (default, 'Fox, silver-backed', 'electric', '4','398', 'Montane Coneflower', 'numba1'); 
 --commit;
-select * from pokemon ;
+--select * from pokemon ;

@@ -18,19 +18,6 @@ public class Pokemon {
 	private String item;
 	private String trainer;
 	
-	@Override
-	public String toString() {
-		return "Pokemon [name=" + name +"health=" + health + ", exp=" + exp + ", level=" + level + ", type=" + type
-				+  ", item=" + item + "]";
-	}
-	
-public String getTrainer() {
-		return trainer;
-	}
-
-	public void setTrainer(String trainer) {
-		this.trainer = trainer;
-	}
 
 	//constru
 	public Pokemon() {
@@ -40,9 +27,22 @@ public String getTrainer() {
 		level=0;
 		type="type";
 		name="Pokemon";
-		item="leftovers";
+		item=" ";
+	}
+	@Override
+	public String toString() {
+		return "Pokemon [name=" + name +"health=" + health + ", exp=" + exp + ", level=" + level + ", type=" + type
+				+  ", item=" + item + "]";
 	}
 	
+	public String getTrainer() {
+		return trainer;
+	}
+
+	public void setTrainer(String trainer) {
+		this.trainer = trainer;
+	}
+
 	public int getId() {
 		return id;
 	}

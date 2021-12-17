@@ -44,14 +44,15 @@ public class TrainerPostgres implements TrainerDAO{
 		
 	}
 
+
 	@Override
-	public Set<Trainer> getByLevel() {
+	public Trainer getByUserName(String username) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Trainer getByUserName(String username) {
+	public Set<Trainer> getByLevel(int level) {
 		// TODO Auto-generated method stub
 		return null;
 	}
