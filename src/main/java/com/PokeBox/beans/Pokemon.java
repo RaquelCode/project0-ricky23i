@@ -27,7 +27,7 @@ public class Pokemon {
 		level=0;
 		type="type";
 		name="Pokemon";
-		item=" ";
+		item="";
 	}
 	@Override
 	public String toString() {

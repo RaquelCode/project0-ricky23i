@@ -14,9 +14,9 @@ public class PokemonDAOTest {
 	
 	@BeforeAll
 	public void getByIdWhenIdExists() {
-		int idInput = 10;
+		int idInput = 3;
 		Pokemon idOutput = pokeDao.getByID(idInput);
-		assertEquals(10, idOutput.getId());
+		assertEquals(3, idOutput.getId());
 	}
 	
 	@BeforeAll

@@ -5,6 +5,7 @@ create table if not exists trainer(
 	lv integer , --will be set in java if null is sent
 	t_age integer not null
 );
+
 create table if not exists pokemon(
 	id serial primary key,
 	p_name varchar(50) not null,
