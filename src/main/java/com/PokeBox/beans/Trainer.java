@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Trainer {
 
-	private int money;
+	private int id;
 	private String name;
 	private String username;
 	private int sublv;
@@ -17,7 +17,7 @@ public class Trainer {
 	//contruc
 	public Trainer() {
 		username=" ";
-		money=0;
+		id=0;
 		name="Trainer";
 		sublv=0;
 		age=10;
@@ -28,6 +28,15 @@ public class Trainer {
 	return username;	
 	}
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public String getName() {
 		return name;
 	}
@@ -59,6 +68,6 @@ public class Trainer {
 	}
 	@Override
 	public String toString() {
-		return "Name: "+name+" Age: "+age+ " $: "+money+" Box subscription Level: "+sublv;
+		return "Name: "+name+" Age: "+age+ "id: "+id+" Box subscription Level: "+sublv;
 	}
 }

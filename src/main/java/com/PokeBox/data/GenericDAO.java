@@ -8,6 +8,6 @@ public interface GenericDAO<D> {
 	public Set<D> getAll();
 	public void update(D dataToUpdate);
 	public void delete(D dataToDelete);
-	public Set<D> getByLevel();
+	public Set<D> getByLevel( int level);
 	
 }

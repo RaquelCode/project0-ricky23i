@@ -16,11 +16,14 @@ import com.PokeBox.utils.ConnectionUtil;
 
 
 public class TrainerPostgres implements TrainerDAO{
+		private ConnectionUtil connUtil = ConnectionUtil.getConnectionUtil();
+
+
 
 	@Override
 	public int create(Trainer dataToAdd) {
-		// TODO Auto-generated method stub
-		return 0;
+	return 0;
+
 	}
 
 	@Override

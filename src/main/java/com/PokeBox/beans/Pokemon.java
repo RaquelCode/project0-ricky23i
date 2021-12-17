@@ -16,13 +16,23 @@ public class Pokemon {
 	private String type;
 	private String name;
 	private String item;
+	private String trainer;
 	
 	@Override
 	public String toString() {
 		return "Pokemon [name=" + name +"health=" + health + ", exp=" + exp + ", level=" + level + ", type=" + type
 				+  ", item=" + item + "]";
 	}
-//constru
+	
+public String getTrainer() {
+		return trainer;
+	}
+
+	public void setTrainer(String trainer) {
+		this.trainer = trainer;
+	}
+
+	//constru
 	public Pokemon() {
 		id=0;
 		health=255;

@@ -1,9 +1,9 @@
-# Project 0: Bike Shop
+# Project 0: Poke Box
 The goal of this project is to show that you can plan, code, prioritize, and meet deadlines. Failure to present a satisfactory project will result in a release from training.
 
 Note: testing is a primary focus of this project. A fully-functional application with little-to-no testing is *not* a satisfactory project, but a well-tested application that is missing some functionality may still be satisfactory.
 
-The application that you will be building will be an API for a bicycle shop. There will not be a front end for this project, so presentations will be done using Postman.
+The application that you will be building will be an API for a poke shop. There will not be a front end for this project, so presentations will be done using Postman.
 
 ## Due Dates
 The project (all pushed code on your project0-yourname repository) will be due on Monday, December 20th by the end of the day.
@@ -18,17 +18,18 @@ Presentations to me and QC will be on Wednesday, December 22nd (time TBD).
 6. Postman test suites are created to test all endpoints.
 
 ## Functional Requirements
-1. As a user, I can view all bicycles.
-    - GET /bicycles
-2. As a user, I can add a new bicycle.
-    - POST /bicycles
-3. As a user, I can update a bicycle.
-    - PUT /bicycles/{id}
-4. As a user, I can view bicycles by ID.
-    - GET /bicycles/{id}
-5. As a user, I can search bicycles by brand/model.
-    - GET /bicycles?brand=
-    - GET /bicycles?model=
+1. As a user, I can view all Pokemon.
+	-GET /Pokemon
+2. As a user, I can add a new Pokemon.
+	-POST /Pokemon
+3. As a user, I can update a Pokemon.
+	-PUT /Pokemon/{id}
+4. As a user, I can view Pokemon by ID.
+	-GET /Pokemon/{id}
+5. As a user, I can search Pokemon if they are holding an item and greater than a given level.
+	-GET /Pokemon?item=
+	-GET /Pokemon?level=
+
 
 ## Presentation Requirements
 Presentations should be no more than 5 minutes long. Your primary goals in your presentation should be:
