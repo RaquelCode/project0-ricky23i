@@ -28,10 +28,20 @@ public class PokeBoxApp {
 					String itemSearch = ctx.queryParam("item");
 					if(lvSearch!=null && !"".equals(lvSearch)) {
 						Set<Pokemon> pokeFound=tServ.ViewByLevel(Integer.parseInt(lvSearch));
+						if(pokeFound.isEmpty()) {
+							ctx.status(404);
+							ctx.result("Pokemon higher than level "+ lvSearch + " do not exist.");
+						}
+						else
 						ctx.json(pokeFound);
 					}
 					else if (itemSearch!=null && !"".equals(itemSearch)) {
 						Set<Pokemon> pokeFound=tServ.HasItem();
+						if(pokeFound.isEmpty()) {
+							ctx.status(404);
+							ctx.result("No Pokemon have items");
+						}
+						else
 						ctx.json(pokeFound);
 					}
 					else {
@@ -59,7 +69,10 @@ public class PokeBoxApp {
 							if (poke != null)
 								ctx.json(poke);
 							else
+							{
 								ctx.status(404);
+								ctx.result("Pokemon ID does not exist");
+							}
 						} catch (NumberFormatException e) {
 							ctx.status(400);
 							ctx.result("Pokemon ID must be a numeric value");
@@ -80,6 +93,7 @@ public class PokeBoxApp {
 							} else {
 								// conflict: the id doesn't match the id of the pet sent
 								ctx.status(HttpCode.CONFLICT);
+								ctx.result("Pokemon IDs do not match");
 							}
 						} catch (NumberFormatException e) {
 							ctx.status(400);

@@ -119,6 +119,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 			else
 				pStmt.setString(6, dataToUpdate.getItem());
 			pStmt.setString(7, dataToUpdate.getTrainer());
+			pStmt.setInt(8, dataToUpdate.getId());
 			
 			int rowsAffected = pStmt.executeUpdate();
 			
