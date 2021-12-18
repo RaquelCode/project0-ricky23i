@@ -1,4 +1,7 @@
 package com.PokeBox.beans;
+
+import java.util.Objects;
+
 /**
  * Pokemon will be stored in a PokeBox with the trainers information. They can add and remove them.
  * 
@@ -98,6 +101,23 @@ public class Pokemon {
 
 	public void setItem(String item) {
 		this.item = item;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(exp, health, id, item, level, name, trainer, type);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pokemon other = (Pokemon) obj;
+		return exp == other.exp && health == other.health && id == other.id && Objects.equals(item, other.item)
+				&& level == other.level && Objects.equals(name, other.name) && Objects.equals(trainer, other.trainer)
+				&& Objects.equals(type, other.type);
 	}
 
 	

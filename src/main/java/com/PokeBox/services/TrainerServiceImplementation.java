@@ -53,11 +53,16 @@ public class TrainerServiceImplementation implements TrainerService{
 
 	@Override
 	public Pokemon updatePokemon(Pokemon pokeToUpdate) {
-		if (pokeDao.getByID(pokeToUpdate.getId()) != null) {
+		/**if (pokeDao.getByID(pokeToUpdate.getId()) != null) {
 			pokeDao.update(pokeToUpdate);
 			pokeToUpdate = pokeDao.getByID(pokeToUpdate.getId());
 			return pokeToUpdate;
+			*/
+		if (pokeDao.getByID(pokeToUpdate.getId()) != null) {
+			pokeDao.update(pokeToUpdate);
+			return pokeDao.getByID(pokeToUpdate.getId());
 		}
+		
 		return null;
 
 	}

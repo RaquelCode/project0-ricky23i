@@ -99,7 +99,7 @@ Set<Pokemon> allPokemon = new HashSet<>();
 		
 		return allPokemon;
 	}
-//updates pokemon. Trainer is not to be updated as it should never change within the box
+//updates pokemon. 
 	@Override
 	public void update(Pokemon dataToUpdate) {
 		try (Connection conn = connUtil.getConnection()) {
