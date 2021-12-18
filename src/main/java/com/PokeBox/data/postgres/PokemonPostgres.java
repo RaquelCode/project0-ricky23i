@@ -81,6 +81,9 @@ Set<Pokemon> allPokemon = new HashSet<>();
 				poke.setName(resultSet.getString("p_name"));
 				poke.setLevel(resultSet.getInt("lv"));
 				poke.setType(resultSet.getString("p_type"));
+				if(resultSet.getString("item")==null)
+				poke.setItem("");
+				else
 				poke.setItem(resultSet.getString("item"));
 				poke.setExp(resultSet.getInt("p_exp"));
 				poke.setTrainer(resultSet.getString("trainer"));
@@ -176,7 +179,10 @@ Set<Pokemon> allPokemon = new HashSet<>();
 				poke.setName(resultSet.getString("p_name"));
 				poke.setLevel(resultSet.getInt("lv"));
 				poke.setType(resultSet.getString("p_type"));
-				poke.setItem(resultSet.getString("item"));
+				if(resultSet.getString("item")==null)
+					poke.setItem("");
+					else
+					poke.setItem(resultSet.getString("item"));
 				poke.setExp(resultSet.getInt("p_exp"));
 				poke.setTrainer(resultSet.getString("trainer"));
 				poke.setHealth(resultSet.getInt("hp"));
@@ -208,7 +214,10 @@ Set<Pokemon> allPokemon = new HashSet<>();
 				poke.setName(resultSet.getString("p_name"));
 				poke.setLevel(resultSet.getInt("lv"));
 				poke.setType(resultSet.getString("p_type"));
-				poke.setItem(resultSet.getString("item"));
+				if(resultSet.getString("item")==null)
+					poke.setItem("");
+					else
+					poke.setItem(resultSet.getString("item"));
 				poke.setExp(resultSet.getInt("p_exp"));
 				poke.setTrainer(resultSet.getString("trainer"));
 				poke.setHealth(resultSet.getInt("hp"));

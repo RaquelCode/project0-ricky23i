@@ -44,6 +44,7 @@ public class PokemonDAOTest {
 		Set<Pokemon> Output = pokeDao.getByHasItem();
 		assertNotNull(Output);
 	}
+	@Test
 	public void getByLevel() {
 		Pokemon newPoke = new Pokemon();
 		newPoke.setLevel(25);
