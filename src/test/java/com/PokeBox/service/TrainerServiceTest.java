@@ -116,7 +116,7 @@ public class TrainerServiceTest {
 		
 	}
 	@Test
-	public void searchByLevelExists() {  //not finish
+	public void searchByLevelExists() {  
 		when(pokeDao.getByLevel(20)).thenReturn(mockPokemon);
 		Set<Pokemon> actualPokemon = tServ.ViewByLevel(20);
 		boolean lv = true;
