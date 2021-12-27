@@ -13,6 +13,14 @@ import com.PokeBox.beans.Pokemon;
 import com.PokeBox.services.TrainerService;
 import com.PokeBox.services.TrainerServiceImplementation;
 
+/**
+ * This class is the PokeBoxApp which use Javalin as a framework to handle HTTP requests. 
+ * What I have noted this class have the code well organized and readable with all different endpoints required for this project.
+ * And the endpoint (GET, POST, PUT)are grouped together and nested to make it more easy to understand. 
+
+ */
+
+
 public class PokeBoxApp {
 	private static TrainerService tServ= new TrainerServiceImplementation();
 	public static void main(String[] args) {
