@@ -7,6 +7,11 @@ import com.PokeBox.data.PokemonDAO;
 import com.PokeBox.beans.Pokemon;
 import com.PokeBox.data.postgres.PokemonPostgres;
 
+/**
+ *  The TrainerServiceImplementation implements has all the method working with it business logic. 
+ *
+ */
+
 public class TrainerServiceImplementation implements TrainerService{
 
 	private PokemonDAO pokeDao=new PokemonPostgres();
