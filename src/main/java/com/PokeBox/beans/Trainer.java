@@ -3,7 +3,10 @@ import java.util.ArrayList;
 /**
  * Trainers will be able to add or delete pokemon from a online database. 
  * @author rduen
- *
+ * This class the author uses encapsulation, to hide sensitive data from users. 
+ * To achieve this, he uses declared class variables and attributes as private
+ * And provide public get and set methods to access and update the value of pokemon from a online database
+ * Plus constructor to instantiate the object and a ArrayList of pokemon. His code is well organized and seems well done!
  */
 
 public class Trainer {
