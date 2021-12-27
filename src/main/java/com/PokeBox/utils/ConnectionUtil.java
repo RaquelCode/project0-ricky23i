@@ -16,6 +16,7 @@ import java.util.Properties;
  */
 // this class follows the singleton design pattern
 // (private constructor, public static synchronized getter method)
+//The class connection works has all import needed to make it works
 public class ConnectionUtil {
 	private static ConnectionUtil connUtil;
 	private static Properties databaseProps;
