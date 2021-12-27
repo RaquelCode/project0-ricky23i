@@ -20,6 +20,13 @@ import com.PokeBox.beans.Pokemon;
 import com.PokeBox.data.PokemonDAO;
 import com.PokeBox.services.TrainerServiceImplementation;
 
+/**
+ * 
+ *All method from the PokemonDAO pass the test.
+ *
+ */
+ 
+
 @ExtendWith(MockitoExtension.class)
 public class TrainerServiceTest {
 
