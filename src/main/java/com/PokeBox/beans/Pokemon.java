@@ -4,12 +4,13 @@ import java.util.Objects;
 
 /**
  * Pokemon will be stored in a PokeBox with the trainers information. They can add and remove them.
- * 
- * 
- * 
  * @author rduen
- *
- */
+ * In this class the author uses encapsulation, to hide sensitive data from users. 
+ * To achieve this, he uses declared class variables and attributes as private
+ * And provide public get and set methods to access and update the value of pokemon from a online database
+ * Plus constructor to instantiate the object and a ArrayList of pokemon. His code is well organized and seems well done
+ */ 
+ 
 public class Pokemon {
  
 	private int id;
