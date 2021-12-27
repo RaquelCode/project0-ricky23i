@@ -5,7 +5,12 @@ import java.util.Objects;
 /**
  * Pokemon will be stored in a PokeBox with the trainers information. They can add and remove them.
  * 
- * 
+ *  In this class the author uses encapsulation, to hide sensitive data from users. 
+ *  To achieve this, he uses declared class variables and attributes as private
+ *  And provide public get and set methods to access and update the values
+ *  Plus constructor to instantiate the object. It seems the @Override toString() method is not in the bottom of the class, 
+ *  Usually this method comes to the last in the class.  
+ *
  * 
  * @author rduen
  *
