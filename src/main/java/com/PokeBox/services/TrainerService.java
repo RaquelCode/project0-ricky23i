@@ -4,6 +4,8 @@ import java.util.Set;
 
 import com.PokeBox.beans.Pokemon;
 
+ // His business logic is working with its implementation.
+
 public  interface TrainerService {
 
 	public Set<Pokemon> ViewAllPokemon();
