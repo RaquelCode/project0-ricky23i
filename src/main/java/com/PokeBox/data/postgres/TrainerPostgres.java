@@ -15,6 +15,11 @@ import com.PokeBox.data.TrainerDAO;
 import com.PokeBox.utils.ConnectionUtil;
 
 
+/**
+ * The TrainerPostgres implementation does not have any method working and it has unnecessary import java.sql.Connection, 
+ * 
+ */
+
 public class TrainerPostgres implements TrainerDAO{
 		private ConnectionUtil connUtil = ConnectionUtil.getConnectionUtil();
 
