@@ -11,6 +11,10 @@ import com.PokeBox.beans.Pokemon;
 import com.PokeBox.data.PokemonDAO;
 import com.PokeBox.utils.ConnectionUtil;
 
+/**
+ * What I can see he has wall the code is well documented and organized. His connection works with the database  
+ * All his DAO and Generic method seems to be fully integrated with the tables of the database 
+ */
 
 public class PokemonPostgres implements PokemonDAO{
 	private ConnectionUtil connUtil = ConnectionUtil.getConnectionUtil();
