@@ -6,6 +6,11 @@ import com.PokeBox.beans.Pokemon;
 import com.PokeBox.data.postgres.PokemonPostgres;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ *All method from the DAO (database) was tested and it seems it is working
+ *
+ */
+
 import java.util.Set;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PokemonDAOTest {
